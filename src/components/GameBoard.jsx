@@ -13,7 +13,7 @@ export default function GameBoard({onSelectSquare}) {
   //     const updatedBoard = [...previousGameBoard.map(innerArray => [...innerArray])]; //new array with new nested arrays
   //     updatedBoard[rowIndex][colIndex] = activePlayerSymbol;
   //     return updatedBoard;
-  //   });
+  //   });                                                  older version
 
   //   onSelectSquare();
   // }
