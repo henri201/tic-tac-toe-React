@@ -10,7 +10,9 @@ function App() {
 
   function handleSelectSquare(rowIndex, colIndex) {
     setActivePlayer((currentlyActivePlayer) =>
-      currentlyActivePlayer === "X" ? "O" : "X"
+      currentlyActivePlayer === "X" ? "O" : setGameTurns(prevTurns => {
+        const updatedTurns = [{square: {row: rowIndex, col: colIndex}}, ...prevTurns];
+      })
     );
     setGameTurns((prevTurns) => {
       let currentPlayer = "X";
