@@ -9,10 +9,8 @@ function App() {
   const [activePlayer, setActivePlayer] = useState("X");
 
   function handleSelectSquare(rowIndex, colIndex) {
-    setActivePlayer((currentlyActivePlayer) =>
-      currentlyActivePlayer === "X"
-        ? "O"
-        : setGameTurns((prevTurns) => {
+    setActivePlayer((currentlyActivePlayer) => (currentlyActivePlayer === "X" ? "O" : 'X'));
+         setGameTurns((prevTurns) => {
             let currentPlayer = "X";
 
             if (prevTurns.length > 0 && prevTurns[0].player === "X") {
@@ -26,7 +24,7 @@ function App() {
               ...prevTurns,
             ];
           })
-    );
+          
     setGameTurns((prevTurns) => {
       let currentPlayer = "X";
 
